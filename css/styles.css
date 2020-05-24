@@ -1,0 +1,66 @@
+:root {
+  --highlightColor: #950014;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+}
+
+nav {
+  height: 6vw;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: center;
+}
+
+nav a img {
+  height: 100%;
+  width: auto;
+}
+
+.model-navigation ul {
+  height: 100%;
+  display: grid;
+  grid-auto-columns: 1fr;
+}
+
+.model-navigation li {
+  height: 100%;
+  padding: 0 2rem;
+  font: 400 1rem/1.1 sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #ececec;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.model-navigation li:hover:not(.active) {
+  color: var(--highlightColor);
+}
+
+.model-navigation .active {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: var(--highlightColor);
+}
+
+.model-navigation .active::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: -5px;
+  width: 5px;
+  height: 100%;
+  background: var(--highlightColor);
+}
